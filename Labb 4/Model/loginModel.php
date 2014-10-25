@@ -1,14 +1,27 @@
 <?php
 	
+	require_once("loginDAL.php");
+
 	class loginModel{
 
 		private $userName = 'Admin';
 		private $passWord = 'Password';
+		private $loginDAL;
+
+		function __construct(){
+
+			$this->loginDAL = new loginDAL();
+
+		}		
 
 		function verifyInput($enteredUsername, $enteredPassword){
 
 			if (isset($enteredUsername, $enteredPassword)) {
-			
+				
+				$userList = $this->loginDAL->getUsersFromDB();
+
+				echo($userList[0]);
+
 				if ($enteredUsername == $this->userName && $enteredPassword == $this->passWord ) {
 					$this->setSession();
 					return TRUE;

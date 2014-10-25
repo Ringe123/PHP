@@ -16,7 +16,7 @@
 						<h1>Rw222bq Laboration 2</h1>
 						<h2>Ej Inloggad</h2>
 
-						<input type='button' name='register' value='Registrera ny användare'/>						
+						<a href='register/register.php'>Registrera en ny användare</a>						
 						<form action='' method='post'>
 						<fieldset>
 						<legend>Login - Skriv in användarnamn och lösenord</legend>
